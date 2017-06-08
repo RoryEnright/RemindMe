@@ -13,13 +13,13 @@ class ExamplesController < OpenReadController
   # GET /examples/1
   # GET /examples/1.json
   def show
-    render json: Example.find(params[:id])
+    render json: Example.find(params[:id])  # :id grabs the id from the thing
   end
 
   # POST /examples
   # POST /examples.json
   def create
-    @example = current_user.examples.build(example_params)
+    @example = current_user.examples.build(example_params) # example_params, see bottom
 
     if @example.save
       render json: @example, status: :created
@@ -51,6 +51,7 @@ class ExamplesController < OpenReadController
   end
 
   def example_params
+    #  :example = set keys to require from thing(:book, :ingredient).  :text is a param like :name, :id, etc.
     params.require(:example).permit(:text)
   end
 
