@@ -4,7 +4,7 @@ class RemindersController < OpenReadController
 
   # GET /reminders
   def index
-    @reminders = Reminder.all
+    @reminders = current_user.reminders
 
     render json: @reminders
   end
