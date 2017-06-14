@@ -6,8 +6,8 @@ curl "${API}${URL_PATH}" \
   --header "Authorization: Token token=$TOKEN"
 
 API="${API_ORIGIN:-http://localhost:4741}"
-URL_PATH="/reminders/2"
+URL_PATH="/reminders/40"
 curl "${API}${URL_PATH}" \
   --include \
   --request DELETE  \
-  --header "Authorization: Token token=BAhJIiVjYzdmNTkxNzZiMjQzYWM0NzBiYWYzOGZjZTRhMGRjYwY6BkVG--44f04efa1b649cbcabb24f70a39359bb81d64ca2"
+  --header "Authorization: Token token=BAhJIiU1MjZlY2RmOTQ0Yzc1ZDg2MThhNTE4Mjk4ZGJlZjY1NwY6BkVG--00e736c028b71a683c2b0fbcc983138a905cec80"
